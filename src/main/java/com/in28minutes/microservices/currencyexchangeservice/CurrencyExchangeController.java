@@ -19,6 +19,11 @@ public class CurrencyExchangeController {
 	@Autowired
 	private ExchangeValueRepository repository;
 	
+	@GetMapping("/")
+	public String welcome() {
+		return "Welcome to java techie Sayan";
+	}
+	
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public ExchangeValue retrieveExchangeValue
 		(@PathVariable String from, @PathVariable String to){
